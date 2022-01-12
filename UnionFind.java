@@ -50,42 +50,83 @@ public class UnionFind
 
     public static void main(String[] args)
     {
-        UnionFind u = new UnionFind(10);
+        test1();
+//        test2();
+//        test3();
 
-        System.out.println("Anzahl der Partionierungen " + u.size());
-        System.out.println();
-
-        u.union(0, 1);
-        System.out.println("Anzahl der Partionierungen " + u.size());
-        System.out.println("1 befindet sich in " + u.find(1));
-        System.out.println();
-
-        u.union(3, 2);
-        System.out.println("Anzahl der Partionierungen " + u.size());
-        System.out.println();
-
-        u.union(4, 5);
-        System.out.println("Anzahl der Partionierungen " + u.size());
-        System.out.println();
-
-        u.union(3, 4);
-        System.out.println("Anzahl der Partionierungen " + u.size());
-        System.out.println("5 befindet sich in " + u.find(5));
-        System.out.println();
-
-        u.union(0, 3);
-        System.out.println("Anzahl der Partionierungen " + u.size());
-        System.out.println("1 befindet sich in " + u.find(1));
-        System.out.println();
-
-        u.union(7, 8);
-        System.out.println("Anzahl der Partionierungen " + u.size());
-        System.out.println();
-
-        // u.union(7, 0); // throws IllegalArgumentException
-        u.union(7, 3);
-        System.out.println("Anzahl der Partionierungen " + u.size());
-        System.out.println("8 befindet sich in " + u.find(8));
-        System.out.println();
     }
+
+    public static void test1() {
+    UnionFind u = new UnionFind(10);
+    System.out.println("Anzahl der Partionierungen " + u.size());
+    System.out.println();
+
+    u.union(0, 1);
+    System.out.println("Anzahl der Partionierungen " + u.size());
+    System.out.println("1 befindet sich in " + u.find(1));
+    System.out.println();
+
+    u.union(3, 2);
+    System.out.println("Anzahl der Partionierungen " + u.size());
+    System.out.println();
+
+    u.union(4, 5);
+    System.out.println("Anzahl der Partionierungen " + u.size());
+    System.out.println();
+
+    u.union(3, 4);
+    System.out.println("Anzahl der Partionierungen " + u.size());
+    System.out.println("5 befindet sich in " + u.find(5));
+    System.out.println();
+
+    u.union(0, 3);
+    System.out.println("Anzahl der Partionierungen " + u.size());
+    System.out.println("1 befindet sich in " + u.find(1));
+    System.out.println();
+
+    u.union(7, 8);
+    System.out.println("Anzahl der Partionierungen " + u.size());
+    System.out.println();
+
+    // u.union(7, 0); // throws IllegalArgumentException
+    u.union(7, 3);
+    System.out.println("Anzahl der Partionierungen " + u.size());
+    System.out.println("8 befindet sich in " + u.find(8));
+    System.out.println();
+    }
+
+
+    public static void test2() { //schnellstmögliche Vereinigung
+        UnionFind u = new UnionFind(6);
+        System.out.println("Anzahl der Partitionierungen: " + u.size());
+        u.union(0,1);
+        System.out.println("Anzahl der Partitionierungen: " + u.size());
+        u.union(0,2);
+        System.out.println("Anzahl der Partitionierungen: " + u.size());
+        u.union(0,3);
+        System.out.println("Anzahl der Partitionierungen: " + u.size());
+        u.union(0,4);
+        System.out.println("Anzahl der Partitionierungen: " + u.size());
+        u.union(0,5);
+        System.out.println("Anzahl der Partitionierungen: " + u.size());
+    }
+
+    public static void test3() {
+        UnionFind u = new UnionFind(6);
+        System.out.println("Anzahl der Partitionierungen: " + u.size());
+        u.union(0,1);
+        System.out.println("Anzahl der Partitionierungen: " + u.size());
+        u.union(0,2);
+        System.out.println("3 befindet sich in " + u.find(3));
+        System.out.println("Anzahl der Partitionierungen: " + u.size());
+        u.union(0,3);
+        System.out.println("3 befindet sich in " + u.find(3));
+        System.out.println("Jetzt wird 3 mit 0 vereinigt");
+        System.out.println("Anzahl der Partitionierungen: " + u.size());
+        u.union(0,4);
+        System.out.println("Anzahl der Partitionierungen: " + u.size());
+        u.union(0,5);
+        System.out.println("Anzahl der Partitionierungen: " + u.size());
+    }
+
 }

@@ -150,8 +150,8 @@ public class TelNet {
 
     //main
     public static void main(String[] args) {
-        //abbildung3();
-        abbildung1();
+        abbildung3();
+//        abbildung1();
     }
 
     private static void abbildung1(){
