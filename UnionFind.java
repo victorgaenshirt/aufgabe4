@@ -88,7 +88,6 @@ public class UnionFind
     System.out.println("Anzahl der Partionierungen " + u.size());
     System.out.println();
 
-    // u.union(7, 0); // throws IllegalArgumentException
     u.union(7, 3);
     System.out.println("Anzahl der Partionierungen " + u.size());
     System.out.println("8 befindet sich in " + u.find(8));
