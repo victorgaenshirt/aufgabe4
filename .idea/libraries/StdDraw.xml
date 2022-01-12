@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="StdDraw">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Files_From_Bittel/StdDraw.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
